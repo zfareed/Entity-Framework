@@ -8,3 +8,10 @@ Lesson 1,2,3
 
 Lesson 4. Introduction
        >> completed
+
+
+Lesson 5. What is Entity Framework?
+       
+       >> Entity framework is an Object Relational Mapping (ORM) framework
+          that offers an automated mechanism to developers for storing and
+          accessing the data in the database.
