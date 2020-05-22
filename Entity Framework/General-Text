@@ -79,3 +79,8 @@ Lesson 16. Dealing with Database Changes
        >> while deleting or modifying can cause sometimes problem
           > after deleting a table or coulumn from database then you have
             to manaually delete in .edmx file
+
+
+Lesson 17. Importing Stored Procedures
+
+       >> completed
