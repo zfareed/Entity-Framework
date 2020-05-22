@@ -71,3 +71,11 @@ Lesson 14. Uncovering the EDMX
 Lesson 15. Connection Strings
  
        >> Explored the connection Strings.
+
+
+Lesson 16. Dealing with Database Changes
+
+       >> while adding does not create a problem
+       >> while deleting or modifying can cause sometimes problem
+          > after deleting a table or coulumn from database then you have
+            to manaually delete in .edmx file
