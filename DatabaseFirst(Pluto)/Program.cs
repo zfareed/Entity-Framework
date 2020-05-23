@@ -13,6 +13,8 @@ namespace DatabaseFirst_Pluto_
             var dbcontext = new PlutoDbContext();
             var courses = dbcontext.GetCourses();
 
+           
+
             foreach (var c in courses)
             {
                 Console.WriteLine(c.Title);

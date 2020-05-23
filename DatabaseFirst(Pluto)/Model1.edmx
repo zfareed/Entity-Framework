@@ -293,10 +293,10 @@
           <FunctionImport Name="DeleteCourse">
             <Parameter Name="CourseID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="funcGetAuthorCourses" IsComposable="true" ReturnType="Collection(PlutoModel.funcGetAuthorCourses_Result)">
+          <FunctionImport Name="GetAuthorCourses" IsComposable="true" ReturnType="Collection(PlutoModel.GetCourses_Result)">
             <Parameter Name="AuthorID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="GetCourses" ReturnType="Collection(PlutoModel.GetCourses_Result)" />
+          <FunctionImport Name="GetCourses" EntitySet="Courses" ReturnType="Collection(PlutoModel.Course)" />
           <FunctionImport Name="InsertCourse">
             <Parameter Name="AuthorID" Mode="In" Type="Int32" />
             <Parameter Name="Title" Mode="In" Type="String" />
@@ -401,21 +401,8 @@
             </EndProperty>
           </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="DeleteCourse" FunctionName="PlutoModel.Store.DeleteCourse" />
-          <FunctionImportMapping FunctionImportName="funcGetAuthorCourses" FunctionName="PlutoModel.Store.funcGetAuthorCourses">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PlutoModel.funcGetAuthorCourses_Result">
-                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
-                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="LevelString" ColumnName="LevelString" />
-                <ScalarProperty Name="Level" ColumnName="Level" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="GetCourses" FunctionName="PlutoModel.Store.GetCourses">
-            <ResultMapping>
+          <FunctionImportMapping FunctionImportName="GetAuthorCourses" FunctionName="PlutoModel.Store.funcGetAuthorCourses">
+          <ResultMapping>
               <ComplexTypeMapping TypeName="PlutoModel.GetCourses_Result">
                 <ScalarProperty Name="CourseID" ColumnName="CourseID" />
                 <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
@@ -425,6 +412,8 @@
                 <ScalarProperty Name="Level" ColumnName="Level" />
               </ComplexTypeMapping>
             </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetCourses" FunctionName="PlutoModel.Store.GetCourses">
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="InsertCourse" FunctionName="PlutoModel.Store.InsertCourse" />
           <FunctionImportMapping FunctionImportName="UpdateCourse" FunctionName="PlutoModel.Store.UpdateCourse" />
