@@ -19,6 +19,10 @@ namespace DatabaseFirst_Pluto_
             {
                 Console.WriteLine(c.Title);
             }
+
+
+            var course = new Course();
+            course.Level = CourseLevel.Advance;
         }
     }
 }
