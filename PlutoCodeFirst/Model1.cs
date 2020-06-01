@@ -16,6 +16,8 @@ namespace PlutoCodeFirst
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
