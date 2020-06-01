@@ -8,10 +8,11 @@ namespace PlutoCodeFirst
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=PlutoContext")
+            : base("name=PlutoCodeFirstExestingDBModel")
         {
         }
 
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }

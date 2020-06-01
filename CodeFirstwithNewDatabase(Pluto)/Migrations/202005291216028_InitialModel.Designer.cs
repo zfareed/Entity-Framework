@@ -13,7 +13,7 @@ namespace CodeFirstwithNewDatabase_Pluto_.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202005231617206_InitialModel"; }
+            get { return "202005291216028_InitialModel"; }
         }
         
         string IMigrationMetadata.Source
